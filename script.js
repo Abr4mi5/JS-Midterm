@@ -1,42 +1,19 @@
-/* ------------------------------ TASK 1 -----------------------------------
-Turimas "users" masyvas. 
+/* ------------------------------ TASK 5 -----------------------------------
+Turimas "audi" objektas.
 
-Parašykite funckijas, kurios atliks nurodytas užduotis:
-1. funkcija "getUserAverageAge" - kaip argumentą priims masyvą ir duoto masyvo 
-atveju grąžins visų "users" amžiaus vidurkį kaip skaičių.
-2. funkcija "getUsersNames" -  kaip argumentą priims masyvą ir duoto masyvo 
-atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
+Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
+ir grąžins visus jo "key" masyve.
 -------------------------------------------------------------------------- */
+const audi = {
+  make: 'audi',
+  model: 'A6',
+  year: 2005,
+  color: 'white',
+};
 
-const users = [
-  { id: '1', name: 'John Smith', age: 20 },
-  { id: '2', name: 'Ann Smith', age: 24 },
-  { id: '3', name: 'Tom Jones', age: 31 },
-  { id: '4', name: 'Rose Peterson', age: 17 },
-  { id: '5', name: 'Alex John', age: 25 },
-  { id: '6', name: 'Ronald Jones', age: 63 },
-  { id: '7', name: 'Elton Smith', age: 16 },
-  { id: '8', name: 'Simon Peterson', age: 30 },
-  { id: '9', name: 'Daniel Cane', age: 51 },
-];
-
-function calculateAverageAge(usersArray) {
-  const totalAge = usersArray.reduce((acc, user) => acc + user.age, 0);
-  const averageAge = Math.round(totalAge / usersArray.length);
-  return averageAge;
+function showObjectKeys(obj) {
+  return Object.keys(obj);
 }
 
-const averageAge = calculateAverageAge(users);
-console.log(averageAge);
-
-function getUserNames(usersArray) {
-  return usersArray.map(user => user.name);
-}
-
-const userNames = getUserNames(users);
-console.log(userNames);
-
-
-
-
-
+const keysArray = showObjectKeys(audi);
+console.log(keysArray);
