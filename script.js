@@ -1,27 +1,25 @@
-/* ------------------------------ TASK 3 --------------------------------------------
-Sukurkite konstruktoriaus funkciją "Calculator" (naudokite ES5), kuri gebės sukurti objektus su 4 metodais:
-sum(a, b) - priima du skaičius ir grąžina jų sumą.
-subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
-multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
-division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
------------------------------------------------------------------------------------- */
+/* ------------------------------ TASK 4 ---------------------------------------------------------------
+Sukurkite konstruktoriaus funkciją "Movie" (naudokte ES6), kuri gebės sukurti objektus 3 savybėm ir 1 metodu.
 
-class Calculator {
-    sum(a, b) {
-      return a + b;
+Savybės:
+title: string
+director: string
+budget: number
+
+Metodas: 
+wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
+------------------------------------------------------------------------------------------------------ */
+
+class Movie {
+    constructor(title, director, budget) {
+      this.title = title;
+      this.director = director;
+      this.budget = budget;
     }
-  
-    subtraction(a, b) {
-      return a - b;
+
+    wasExpensive() {
+      return this.budget > 100000000; 
     }
+  }
   
-    multiplication(a, b) {
-      return a * b;
-    }
   
-    division(a, b) {
-        return a / b;
-      }
-    }
-  
-  const calc = new Calculator();
