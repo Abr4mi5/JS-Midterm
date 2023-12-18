@@ -1,19 +1,27 @@
-/* ------------------------------ TASK 5 -----------------------------------
-Turimas "audi" objektas.
+/* ------------------------------ TASK 3 --------------------------------------------
+Sukurkite konstruktoriaus funkciją "Calculator" (naudokite ES5), kuri gebės sukurti objektus su 4 metodais:
+sum(a, b) - priima du skaičius ir grąžina jų sumą.
+subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
+multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
+division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
+------------------------------------------------------------------------------------ */
 
-Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
-ir grąžins visus jo "key" masyve.
--------------------------------------------------------------------------- */
-const audi = {
-  make: 'audi',
-  model: 'A6',
-  year: 2005,
-  color: 'white',
-};
-
-function showObjectKeys(obj) {
-  return Object.keys(obj);
-}
-
-const keysArray = showObjectKeys(audi);
-console.log(keysArray);
+class Calculator {
+    sum(a, b) {
+      return a + b;
+    }
+  
+    subtraction(a, b) {
+      return a - b;
+    }
+  
+    multiplication(a, b) {
+      return a * b;
+    }
+  
+    division(a, b) {
+        return a / b;
+      }
+    }
+  
+  const calc = new Calculator();
