@@ -1,25 +1,20 @@
-/* ------------------------------ TASK 4 ---------------------------------------------------------------
-Sukurkite konstruktoriaus funkciją "Movie" (naudokte ES6), kuri gebės sukurti objektus 3 savybėm ir 1 metodu.
+/* ------------------------------ TASK 5 ---------------------------------------------------
+Sutvarkykite užduoties "Task 5" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
+-------------------------------------------------------------------------------------------- */
+import {one, two, three,four, five} from "./modules/numbers/numbers.js";
+import {composition} from "./modules/math/composition.js";
+import{division} from "./modules/math/division.js";
+import {multiplication} from "./modules/math/multiplication.js";
+import {substraction} from "./modules/math/subtraction.js";
 
-Savybės:
-title: string
-director: string
-budget: number
+let a = composition(one, four);
+let b = division(four, two);
+let c = substraction(three, two);
+let d = multiplication(five,two);
 
-Metodas: 
-wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
------------------------------------------------------------------------------------------------------- */
 
-class Movie {
-    constructor(title, director, budget) {
-      this.title = title;
-      this.director = director;
-      this.budget = budget;
-    }
 
-    wasExpensive() {
-      return this.budget > 100000000; 
-    }
-  }
-  
-  
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
